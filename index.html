@@ -1,0 +1,795 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Dunia Bakteri Kelas X</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: lembar kerja laboratorium. Header slide-kaca, tab sticky, konten satu kolom lebar baca 70ch, galeri 2 kolom.
+   Warna dari pewarnaan Gram: ungu kristal violet (utama) dan merah muda safranin (kedua). */
+:root{
+  --bg:#f2f5f3; --surface:#ffffff; --surface2:#e7edea; --fg:#14231e; --muted:#51635b; --line:#cdd8d3;
+  --violet:#5a2d8c; --violet-soft:#e9defa; --safranin:#c93a73; --safranin-soft:#fbe0ea; --ok:#1d7a4d; --ok-soft:#d8f1e3; --bad:#b3261e; --bad-soft:#fbe0dd;
+  --f-display:"Bricolage Grotesque","Trebuchet MS",sans-serif; --f-body:"Source Sans 3","Segoe UI",sans-serif; --f-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0e1613; --surface:#16211d; --surface2:#1d2b26; --fg:#e6efeb; --muted:#9db0a7; --line:#2c3d36;
+  --violet:#b894ee; --violet-soft:#2b1f40; --safranin:#f0709c; --safranin-soft:#3d1c29; --ok:#5fd09a; --ok-soft:#173a2a; --bad:#ff8a80; --bad-soft:#40201d; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1613; --surface:#16211d; --surface2:#1d2b26; --fg:#e6efeb; --muted:#9db0a7; --line:#2c3d36;
+  --violet:#b894ee; --violet-soft:#2b1f40; --safranin:#f0709c; --safranin-soft:#3d1c29; --ok:#5fd09a; --ok-soft:#173a2a; --bad:#ff8a80; --bad-soft:#40201d; color-scheme:dark}
+/* Palet tambahan: teal, amber, biru + latar bercorak bakteri dan semburat warna */
+:root{
+  --teal:#0f8b8d; --amber:#e8962a; --sky:#2f7fd1; --on-accent:#ffffff; --btn1:#5a2d8c; --btn2:#c93a73;
+  --hero:linear-gradient(120deg,#4a2380 0%,#8a3a9e 45%,#d4477f 78%,#f08a5d 100%);
+  --bl1:radial-gradient(52rem 36rem at 8% -4%,#e4d3fb 0,transparent 62%);
+  --bl2:radial-gradient(46rem 34rem at 100% 8%,#fbd3e2 0,transparent 62%);
+  --bl3:radial-gradient(48rem 36rem at 0% 100%,#c6eee4 0,transparent 62%);
+  --bl4:radial-gradient(40rem 30rem at 100% 100%,#fde5b8 0,transparent 62%);
+  --pat:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cg fill='%235a2d8c' opacity='.08'%3E%3Crect x='20' y='30' width='46' height='16' rx='8' transform='rotate(-25 43 38)'/%3E%3Ccircle cx='170' cy='60' r='11'/%3E%3Ccircle cx='190' cy='72' r='11'/%3E%3Ccircle cx='164' cy='80' r='11'/%3E%3C/g%3E%3Cg fill='none' stroke='%23c93a73' stroke-width='5' stroke-linecap='round' opacity='.10'%3E%3Cpath d='M30 170 q15 -25 30 0 t30 0 t30 0'/%3E%3C/g%3E%3Cg fill='%230f8b8d' opacity='.09'%3E%3Crect x='150' y='180' width='54' height='16' rx='8' transform='rotate(30 177 188)'/%3E%3Ccircle cx='80' cy='230' r='9'/%3E%3Ccircle cx='230' cy='130' r='8'/%3E%3C/g%3E%3C/svg%3E");
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --teal:#4fd1c5; --amber:#f6c35d; --sky:#7db7f5; --on-accent:#1a0f2e; --btn1:#b894ee; --btn2:#f0709c;
+  --hero:linear-gradient(120deg,#2a1752 0%,#5b2a7a 48%,#9c2f60 80%,#b5532f 100%);
+  --bl1:radial-gradient(52rem 36rem at 8% -4%,#2d1d4d 0,transparent 62%);
+  --bl2:radial-gradient(46rem 34rem at 100% 8%,#47172f 0,transparent 62%);
+  --bl3:radial-gradient(48rem 36rem at 0% 100%,#10372f 0,transparent 62%);
+  --bl4:radial-gradient(40rem 30rem at 100% 100%,#3d2c0d 0,transparent 62%)}}
+:root[data-theme="dark"]{
+  --teal:#4fd1c5; --amber:#f6c35d; --sky:#7db7f5; --on-accent:#1a0f2e; --btn1:#b894ee; --btn2:#f0709c;
+  --hero:linear-gradient(120deg,#2a1752 0%,#5b2a7a 48%,#9c2f60 80%,#b5532f 100%);
+  --bl1:radial-gradient(52rem 36rem at 8% -4%,#2d1d4d 0,transparent 62%);
+  --bl2:radial-gradient(46rem 34rem at 100% 8%,#47172f 0,transparent 62%);
+  --bl3:radial-gradient(48rem 36rem at 0% 100%,#10372f 0,transparent 62%);
+  --bl4:radial-gradient(40rem 30rem at 100% 100%,#3d2c0d 0,transparent 62%)}
+*{box-sizing:border-box}
+body{background-color:var(--bg);background-image:var(--pat),var(--bl1),var(--bl2),var(--bl3),var(--bl4);background-attachment:scroll,fixed,fixed,fixed,fixed;color:var(--fg);font:400 17px/1.6 var(--f-body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px}
+.wrap{max-width:900px;margin:0 auto}
+h1,h2,h3{font-family:var(--f-display);line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:1.9rem;margin-bottom:.4rem}h3{font-size:1.25rem}
+p{margin:.6rem 0}
+.mono{font-family:var(--f-mono);font-size:.82rem;letter-spacing:.04em}
+.eyebrow{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+em.sp{font-style:italic}
+header.hero{margin-top:16px;padding:26px 28px;border-radius:18px;background:var(--hero);color:#fff;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;box-shadow:0 10px 30px rgba(74,35,128,.25);position:relative;overflow:hidden}
+header.hero::after{content:"";position:absolute;right:-40px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.10)}
+header.hero::before{content:"";position:absolute;left:38%;bottom:-70px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.07)}
+header.hero>*{position:relative;z-index:1}
+header.hero .eyebrow{color:rgba(255,255,255,.82)}
+header.hero h1{font-size:clamp(2.2rem,7vw,3.6rem);letter-spacing:-.02em}
+header.hero h1 span{color:#ffe08a}
+.meta{margin-top:10px;display:grid;gap:2px;color:rgba(255,255,255,.85)}
+.meta b{color:#fff;font-weight:600}
+.scope{width:120px;height:120px;border-radius:50%;border:6px solid rgba(255,255,255,.9);background:radial-gradient(circle at 50% 50%,#f6f1fc 0 60%,#ffffff 61%);position:relative;overflow:hidden;flex:none;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.scope svg{position:absolute;inset:0;width:100%;height:100%}
+@media(max-width:560px){header.hero{grid-template-columns:1fr}.scope{display:none}}
+nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:2px solid var(--fg);display:flex;gap:4px;overflow-x:auto;padding:8px 0}
+nav.tabs button{font:600 .95rem var(--f-body);padding:9px 16px;border:2px solid transparent;background:none;color:var(--muted);border-radius:8px;cursor:pointer;white-space:nowrap}
+nav.tabs button[aria-selected="true"]{background:var(--violet);color:var(--on-accent)}
+nav.tabs button[data-v="latihan"][aria-selected="true"]{background:var(--teal)}
+nav.tabs button[data-v="asesmen"][aria-selected="true"]{background:var(--safranin)}
+nav.tabs button[data-v="awal"][aria-selected="true"]{background:var(--amber)}
+nav.tabs button[data-v="awal"][aria-selected="true"],nav.tabs button[data-v="latihan"][aria-selected="true"],nav.tabs button[data-v="asesmen"][aria-selected="true"]{color:var(--on-accent)}
+nav.tabs{border-bottom:3px solid transparent;border-image:linear-gradient(90deg,var(--violet),var(--safranin),var(--amber),var(--teal)) 1}
+nav.tabs button:not([aria-selected="true"]):hover{border-color:var(--line);color:var(--fg)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+button:focus-visible,summary:focus-visible,input:focus-visible,label:focus-within{outline:3px solid var(--safranin);outline-offset:2px}
+section.view{padding-top:26px}
+.card{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--c,var(--violet));border-radius:12px;padding:18px 20px;box-shadow:0 2px 10px rgba(60,30,100,.07)}
+.grid2>.card:nth-child(4n+1){--c:var(--violet)}.grid2>.card:nth-child(4n+2){--c:var(--safranin)}.grid2>.card:nth-child(4n+3){--c:var(--teal)}.grid2>.card:nth-child(4n+4){--c:var(--amber)}
+section.view>h2{background:linear-gradient(90deg,var(--btn1),var(--btn2));-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+#m1{--c:var(--violet)}#m2{--c:var(--safranin)}#m3{--c:var(--teal)}#m4{--c:var(--amber)}#m5{--c:var(--sky)}#m6{--c:var(--violet)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.grid2>*{min-width:0}
+.lead{font-size:1.1rem;color:var(--muted);max-width:68ch}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 24px}
+.toc a{font:600 .85rem var(--f-body);padding:6px 12px;border:1.5px solid var(--line);border-radius:99px;color:var(--fg);text-decoration:none;background:var(--surface)}
+.toc a:hover{border-color:var(--violet);color:var(--violet)}
+.block{margin-top:40px;scroll-margin-top:70px}
+.block>h2{display:flex;gap:12px;align-items:center;padding-bottom:10px;margin-bottom:10px;background:linear-gradient(90deg,var(--c,var(--violet)),transparent 70%) left bottom/100% 3px no-repeat}
+.block>h2 .tag{font:700 .9rem var(--f-mono);color:var(--on-accent);background:var(--c,var(--violet));border-radius:50%;width:34px;height:34px;display:grid;place-items:center;flex:none}
+.keybox{background:var(--violet-soft);border-radius:12px;padding:14px 18px;margin:16px 0;border-left:5px solid var(--violet)}
+.seg button[aria-pressed="true"]{background:var(--c,var(--violet));border-color:var(--c,var(--violet));color:var(--on-accent)}
+.tscroll th{background:var(--violet-soft);color:var(--violet)}
+.keybox b{color:var(--violet)}
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:600 .8rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--surface2)}
+.tscroll{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+/* photo */
+figure.photo{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.photo .frame{aspect-ratio:4/3;background:#06100c;position:relative;display:grid;place-items:center}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo .ph{color:#9fd2b8;text-align:center;padding:16px;font-size:.9rem}
+.photo .ph b{display:block;font:italic 600 1.15rem var(--f-display);color:#e6f6ee;margin-bottom:4px}
+.photo figcaption{padding:10px 14px;font-size:.85rem;color:var(--muted);display:grid;gap:4px}
+.photo figcaption b{color:var(--fg)}
+.photo .up{cursor:pointer;color:var(--violet);font-weight:600;font-size:.8rem;text-decoration:underline}
+.photo .up input{position:absolute;opacity:0;width:1px;height:1px}
+.photo .scalebar{position:absolute;right:10px;bottom:8px;font:500 .7rem var(--f-mono);color:#fff;background:rgba(0,0,0,.55);padding:2px 7px;border-radius:4px}
+/* tab strip inside materi */
+.seg{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0}
+.seg button{font:600 .9rem var(--f-body);padding:8px 14px;border:1.5px solid var(--line);background:var(--surface);color:var(--fg);border-radius:8px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+/* cell diagram */
+.cellwrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px;align-items:start}
+@media(max-width:700px){.cellwrap{grid-template-columns:1fr}}
+.cellwrap svg{width:100%;height:auto;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.cellwrap .hot{cursor:pointer}
+.cellwrap .hot:hover{filter:brightness(1.12)}
+.cellwrap .hot.on{filter:drop-shadow(0 0 6px #ffd54a) brightness(1.1)}
+.cellwrap svg text{pointer-events:none}
+.partinfo{min-height:140px}
+.partinfo h3{color:var(--violet)}
+.parts{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.parts button{font:600 .82rem var(--f-body);padding:5px 10px;border-radius:99px;border:1.5px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer}
+.parts button.on{background:var(--violet);border-color:var(--violet);color:var(--on-accent)}
+/* fission */
+.fis svg{width:100%;height:auto;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.fis .ctrl{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.fis input[type=range]{flex:1;min-width:160px;accent-color:var(--violet)}
+.big{font:700 1.6rem var(--f-display);color:var(--violet)}
+/* peran */
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.chips button{font:600 .9rem var(--f-body);padding:7px 14px;border-radius:99px;border:1.5px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer}
+.chips button[aria-pressed="true"]{background:var(--sky);border-color:var(--sky);color:var(--on-accent)}
+.chips button[data-r="good"][aria-pressed="true"]{background:var(--ok);border-color:var(--ok)}
+.chips button[data-r="bad"][aria-pressed="true"]{background:var(--bad);border-color:var(--bad)}
+.chips button[aria-pressed="true"]{color:var(--on-accent)}
+.role{display:flex;flex-direction:column;gap:10px}
+.role .badge{align-self:flex-start;font:500 .72rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:6px}
+.badge.good{background:var(--ok-soft);color:var(--ok)}.badge.bad{background:var(--bad-soft);color:var(--bad)}
+/* quiz */
+.q{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--violet);border-radius:12px;padding:18px 20px;margin:16px 0;box-shadow:0 2px 10px rgba(60,30,100,.07)}
+#v-latihan .q{border-top-color:var(--teal)}
+#v-asesmen .q{border-top-color:var(--safranin)}
+#v-latihan .num{color:var(--teal)}#v-asesmen .num{color:var(--safranin)}
+.opt .l{background:var(--surface2)}
+.opt.sel .l,.opt.right .l,.opt.wrong .l{background:transparent}
+.bar i{background:linear-gradient(90deg,var(--teal),var(--violet))}
+.q .num{font:500 .8rem var(--f-mono);color:var(--muted);letter-spacing:.08em}
+.q p.stem{font-weight:600;margin:6px 0 12px}
+.opts{display:grid;gap:8px}
+.opt{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;font:400 1rem/1.45 var(--f-body);padding:10px 14px;border:1.5px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--violet)}
+.opt .l{font:700 .85rem var(--f-mono);width:24px;height:24px;border-radius:50%;border:1.5px solid currentColor;display:grid;place-items:center;flex:none;margin-top:1px}
+.opt.sel{border-color:var(--violet);background:var(--violet-soft)}
+.opt.right{border-color:var(--ok);background:var(--ok-soft)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.opt:disabled{cursor:default}
+.fb{margin-top:12px;padding:10px 14px;border-radius:8px;font-size:.95rem}
+.fb.ok{background:var(--ok-soft)}.fb.no{background:var(--bad-soft)}
+.btn{font:600 1rem var(--f-body);padding:11px 22px;border-radius:99px;border:2px solid transparent;background:linear-gradient(120deg,var(--btn1),var(--btn2));color:var(--on-accent);cursor:pointer;box-shadow:0 4px 12px rgba(120,50,140,.25)}
+.btn:hover:not(:disabled){filter:brightness(1.08)}
+.btn.alt{background:var(--surface);border-color:var(--violet);color:var(--violet);box-shadow:none}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.score{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.ring{width:130px;height:130px;flex:none}
+.bar{height:10px;background:var(--surface2);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--violet);transition:width .3s}
+input[type=text]{font:400 1rem var(--f-body);padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;background:var(--surface);color:var(--fg);width:100%;max-width:360px}
+textarea{font:400 1rem/1.5 var(--f-body);padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);width:100%;min-height:90px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:10px 0}
+summary{cursor:pointer;font-weight:600}
+footer{margin-top:56px;padding-top:18px;border-top:2px solid var(--fg);color:var(--muted);font-size:.88rem}
+footer a{color:var(--violet)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap">
+<header class="hero">
+  <div>
+    <div class="eyebrow">Biologi · Kelas X · Fase E · Kurikulum Merdeka</div>
+    <h1>Dunia <span>Bakteri</span></h1>
+    <div class="meta">
+      <div>Guru pengampu: <b>Bilkis Nur Izzaty, S.Pd</b></div>
+      <div>SMA Negeri 2 Kalianda</div>
+    </div>
+  </div>
+  <div class="scope" aria-hidden="true">
+    <svg viewBox="0 0 120 120"><g fill="#5a2d8c" opacity=".9"><rect x="22" y="40" width="30" height="11" rx="5.5" transform="rotate(-20 37 45)"/><rect x="60" y="70" width="34" height="11" rx="5.5" transform="rotate(25 77 75)"/><rect x="44" y="82" width="26" height="10" rx="5" transform="rotate(-8 57 87)"/></g><g fill="#c93a73" opacity=".9"><circle cx="78" cy="38" r="8"/><circle cx="92" cy="46" r="8"/><circle cx="70" cy="50" r="8"/><circle cx="34" cy="68" r="7"/></g></svg>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="Menu">
+  <button role="tab" id="t-awal" aria-selected="true" data-v="awal">Mulai</button>
+  <button role="tab" id="t-materi" aria-selected="false" data-v="materi">Materi</button>
+  <button role="tab" id="t-latihan" aria-selected="false" data-v="latihan">Latihan Soal</button>
+  <button role="tab" id="t-asesmen" aria-selected="false" data-v="asesmen">Asesmen</button>
+</nav>
+
+<!-- ============ MULAI ============ -->
+<section class="view" id="v-awal">
+  <h2>Selamat datang di laboratorium maya</h2>
+  <p class="lead">Satu sendok teh tanah subur memuat miliaran bakteri. Di usus kita ada ratusan jenis lain. Sebagian membuat yoghurt, sebagian menyebabkan kolera. Pada media ini kamu mengenal mereka lewat foto mikroskop asli, diagram interaktif, dan soal berumpan balik.</p>
+  <div class="grid2" style="margin-top:20px">
+    <div class="card">
+      <div class="eyebrow">Capaian Pembelajaran</div>
+      <p style="margin-top:6px">Mengacu pada CP Biologi Fase E (Kurikulum Merdeka), elemen <b>Pemahaman Biologi</b>: keanekaragaman makhluk hidup dan peranannya, serta elemen <b>Keterampilan Proses</b> (mengamati, menganalisis data, mengomunikasikan hasil). Bakteri dipelajari sebagai bagian dari keanekaragaman makhluk hidup dan peranannya bagi lingkungan, kesehatan, dan teknologi.</p>
+    </div>
+    <div class="card">
+      <div class="eyebrow">Tujuan Pembelajaran</div>
+      <ol style="padding-left:20px;margin:8px 0 0">
+        <li>Mengidentifikasi ciri dan struktur sel bakteri.</li>
+        <li>Membedakan bentuk, susunan, dan kelompok bakteri.</li>
+        <li>Menjelaskan reproduksi dan rekombinasi genetik bakteri.</li>
+        <li>Menganalisis peran bakteri yang menguntungkan dan merugikan.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <div class="eyebrow">Cara belajar</div>
+    <p style="margin-top:6px">1. Baca dan jelajahi tab <b>Materi</b>. 2. Kerjakan <b>Latihan Soal</b>; jawabanmu langsung dibahas. 3. Uji dirimu di <b>Asesmen</b>; skor dan pembahasan muncul setelah kamu mengumpulkan.</p>
+    <p><button class="btn" data-go="materi">Mulai belajar</button></p>
+  </div>
+</section>
+
+<!-- ============ MATERI ============ -->
+<section class="view" id="v-materi" hidden>
+  <h2>Materi Bakteri</h2>
+  <div class="toc">
+    <a href="#m1" data-s="m1">Ciri &amp; struktur</a><a href="#m2" data-s="m2">Bentuk &amp; susunan</a><a href="#m3" data-s="m3">Kelompok &amp; Gram</a><a href="#m4" data-s="m4">Reproduksi</a><a href="#m5" data-s="m5">Peran</a><a href="#m6" data-s="m6">Ringkasan</a>
+  </div>
+
+  <div class="block" id="m1">
+    <h2><span class="tag">1</span>Ciri umum dan struktur sel</h2>
+    <p>Bakteri adalah organisme <b>uniseluler prokariotik</b>. Selnya tidak punya membran inti dan organel bermembran. Ukurannya sekitar <span class="mono">0,5–5 µm</span>, sehingga hanya terlihat dengan mikroskop. Isi selnya berupa <b>sitoplasma</b> yang dibungkus membran plasma dan dinding sel. Bakteri ada di tanah, air, udara, dan tubuh makhluk hidup.</p>
+    <p class="mono" style="color:var(--muted)">Klik bagian sel pada gambar atau tombol di bawahnya.</p>
+    <div class="cellwrap">
+      <div>
+      <svg id="cellSvg" viewBox="-20 0 620 320" role="img" aria-label="Diagram struktur sel bakteri Gram negatif berbentuk batang dengan flagel dan pili" style="color:var(--fg)">
+        <defs>
+          <linearGradient id="gCap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e3d0f7" stop-opacity=".85"/><stop offset=".5" stop-color="#c3a2e6" stop-opacity=".55"/><stop offset="1" stop-color="#a47fd2" stop-opacity=".75"/></linearGradient>
+          <linearGradient id="gWall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbe3a0"/><stop offset=".5" stop-color="#d9992b"/><stop offset="1" stop-color="#f1c35f"/></linearGradient>
+          <linearGradient id="gMem" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b4ecc9"/><stop offset=".5" stop-color="#38a171"/><stop offset="1" stop-color="#8fdcb3"/></linearGradient>
+          <radialGradient id="gCyt" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#fff6ea"/><stop offset="1" stop-color="#f1cfae"/></radialGradient>
+          <radialGradient id="gRib" cx=".35" cy=".35" r=".8"><stop offset="0" stop-color="#8db9f2"/><stop offset="1" stop-color="#1f4f8f"/></radialGradient>
+          <filter id="shd" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="7" stdDeviation="6" flood-color="#000" flood-opacity=".28"/></filter>
+        </defs>
+        <!-- pili -->
+        <g class="hot" data-p="pili" id="gPili" fill="none" stroke="#7a4cb8" stroke-width="2.2" stroke-linecap="round"></g>
+        <!-- flagel -->
+        <g class="hot" data-p="flagel" fill="none" stroke-linecap="round">
+          <path d="M452 160 L468 160 C492 128 512 192 540 156 S578 130 594 160" stroke="#b02c62" stroke-width="5.5"/>
+          <path d="M452 160 L468 160 C492 128 512 192 540 156 S578 130 594 160" stroke="#f6a9c6" stroke-width="1.6"/>
+          <g fill="#d9a441" stroke="#8a5f12" stroke-width="1.2"><ellipse cx="434" cy="160" rx="5" ry="13"/><ellipse cx="420" cy="160" rx="4.5" ry="11"/></g>
+          <rect x="420" y="157" width="34" height="6" rx="3" fill="#b02c62" stroke="none"/>
+        </g>
+        <!-- badan -->
+        <g filter="url(#shd)">
+          <rect class="hot" data-p="kapsul" x="110" y="60" width="340" height="200" rx="100" fill="url(#gCap)" stroke="#8a62c0" stroke-width="1.6" stroke-dasharray="5 4"/>
+          <rect class="hot" data-p="dinding" x="126" y="76" width="308" height="168" rx="84" fill="url(#gWall)" stroke="#9c6a14" stroke-width="2"/>
+          <rect class="hot" data-p="membran" x="140" y="90" width="280" height="140" rx="70" fill="url(#gMem)" stroke="#1f6f4b" stroke-width="2"/>
+        </g>
+        <rect class="hot" data-p="sitoplasma" x="148" y="98" width="264" height="124" rx="62" fill="url(#gCyt)"/>
+        <g class="hot" data-p="ribosom" id="gRibG"></g>
+        <ellipse cx="280" cy="160" rx="100" ry="48" fill="#7a4cb8" opacity=".16" pointer-events="none"/>
+        <g class="hot" data-p="nukleoid" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M215 150 C200 120 250 118 262 140 S300 190 318 160 S350 120 340 150 C335 178 295 200 270 182 S225 175 245 150 S300 125 320 138 S345 170 300 172 S235 160 215 150" stroke="#4b2380" stroke-width="6"/>
+          <path d="M215 150 C200 120 250 118 262 140 S300 190 318 160 S350 120 340 150 C335 178 295 200 270 182 S225 175 245 150 S300 125 320 138 S345 170 300 172 S235 160 215 150" stroke="#c6a4f0" stroke-width="1.8"/>
+        </g>
+        <g class="hot" data-p="plasmid" fill="none">
+          <ellipse cx="180" cy="190" rx="12" ry="9" stroke="#b02c62" stroke-width="4"/><ellipse cx="180" cy="190" rx="12" ry="9" stroke="#f6a9c6" stroke-width="1.2"/>
+          <ellipse cx="385" cy="130" rx="10" ry="8" stroke="#b02c62" stroke-width="4"/><ellipse cx="385" cy="130" rx="10" ry="8" stroke="#f6a9c6" stroke-width="1.2"/>
+        </g>
+        <ellipse cx="280" cy="106" rx="110" ry="6" fill="#fff" opacity=".4" pointer-events="none"/>
+        <!-- label -->
+        <g stroke="currentColor" stroke-width="1" opacity=".55" fill="none">
+          <path d="M100 34 L160 83"/><path d="M100 64 L160 102"/><path d="M100 94 L160 117"/>
+          <path d="M100 146 L166 140"/><path d="M100 206 L170 190"/><path d="M100 256 L242 172"/>
+          <path d="M330 26 L330 46"/><path d="M322 292 L322 214"/><path d="M492 196 L500 170"/>
+        </g>
+        <g fill="currentColor" font-family="Source Sans 3,Segoe UI,sans-serif" font-size="13" font-weight="600">
+          <text x="96" y="38" text-anchor="end">Kapsul</text><text x="96" y="68" text-anchor="end">Dinding sel</text><text x="96" y="98" text-anchor="end">Membran plasma</text>
+          <text x="96" y="150" text-anchor="end">Ribosom</text><text x="96" y="210" text-anchor="end">Plasmid</text><text x="96" y="260" text-anchor="end">Nukleoid</text>
+          <text x="330" y="20" text-anchor="middle">Pili</text><text x="322" y="308" text-anchor="middle">Sitoplasma</text><text x="492" y="212" text-anchor="middle">Flagel</text>
+        </g>
+      </svg>
+      <img id="cellImg" alt="Gambar struktur sel bakteri unggahan" hidden style="width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:#fff">
+      <p style="font-size:.85rem;color:var(--muted);margin:8px 0 0">Ilustrasi ilmiah buatan komputer: bakteri batang Gram negatif (mirip <em class="sp">E. coli</em>) dengan lapisan-lapisannya. Punya gambar struktur sel dari buku atau foto penampang? <label class="up" style="color:var(--violet);font-weight:600;text-decoration:underline;cursor:pointer">Tampilkan gambar sendiri<input type="file" id="cellUp" accept="image/*" style="position:absolute;opacity:0;width:1px;height:1px"></label> <button type="button" id="cellBack" hidden style="font:600 .85rem var(--f-body);margin-left:6px;cursor:pointer">Kembali ke diagram</button></p>
+      </div>
+      <div>
+        <div class="card partinfo" id="partinfo" aria-live="polite"></div>
+        <div class="parts" id="parts"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="block" id="m2">
+    <h2><span class="tag">2</span>Bentuk dan susunan sel</h2>
+    <p>Berdasarkan bentuknya, bakteri dibagi tiga: <b>kokus</b> (bulat), <b>basil</b> (batang), dan <b>spiral</b>. Bentuk ini dikendalikan oleh dinding sel dan kerangka protein di dalam sel.</p>
+    <div class="seg" id="shapeSeg" role="group" aria-label="Pilih bentuk">
+      <button data-k="coccus" aria-pressed="true">Kokus</button><button data-k="bacillus" aria-pressed="false">Basil</button><button data-k="spiral" aria-pressed="false">Spiral</button>
+    </div>
+    <div class="grid2" id="shapeBody"></div>
+  </div>
+
+  <div class="block" id="m3">
+    <h2><span class="tag">3</span>Kelompok bakteri dan pewarnaan Gram</h2>
+    <p>Secara garis besar, bakteri terbagi menjadi dua domain. <b>Archaebacteria (Archaea)</b> banyak hidup di lingkungan ekstrem. <b>Eubacteria (Bacteria)</b> adalah bakteri sejati yang paling kita kenal, termasuk <b>sianobakteri</b> yang berfotosintesis.</p>
+    <div class="tscroll"><table>
+      <tr><th>Pembanding</th><th>Archaebacteria</th><th>Eubacteria</th></tr>
+      <tr><td>Dinding sel</td><td>Tanpa peptidoglikan</td><td>Mengandung peptidoglikan</td></tr>
+      <tr><td>Habitat</td><td>Lingkungan ekstrem: sumber air panas, danau sangat asin, rawa</td><td>Hampir semua habitat</td></tr>
+      <tr><td>Contoh</td><td>Metanogen, halofil, termoasidofil</td><td><em class="sp">E. coli</em>, <em class="sp">Lactobacillus</em>, <em class="sp">Anabaena</em></td></tr>
+    </table></div>
+    <h3 style="margin-top:26px">Pewarnaan Gram</h3>
+    <p>Pewarnaan Gram membedakan bakteri dari struktur dinding selnya. Sampel diberi kristal violet, lalu iodin, lalu alkohol, lalu safranin.</p>
+    <div class="grid2">
+      <div id="gramPhoto"></div>
+      <div class="card">
+        <table style="font-size:.92rem">
+          <tr><th></th><th>Gram positif</th><th>Gram negatif</th></tr>
+          <tr><td>Warna akhir</td><td style="color:var(--violet);font-weight:600">Ungu</td><td style="color:var(--safranin);font-weight:600">Merah muda</td></tr>
+          <tr><td>Peptidoglikan</td><td>Tebal</td><td>Tipis</td></tr>
+          <tr><td>Membran luar</td><td>Tidak ada</td><td>Ada</td></tr>
+          <tr><td>Contoh</td><td><em class="sp">Staphylococcus</em></td><td><em class="sp">E. coli</em></td></tr>
+        </table>
+        <p style="font-size:.9rem;color:var(--muted)">Pada gambar, bulatan ungu adalah kokus Gram positif dan batang merah muda adalah basil Gram negatif. Gambar adalah ilustrasi buatan komputer.</p>
+      </div>
+    </div>
+    <h3 style="margin-top:26px">Sianobakteri</h3>
+    <div class="grid2">
+      <div id="nostocPhoto"></div>
+      <div class="card"><p>Sianobakteri (dulu disebut alga hijau-biru) adalah bakteri <b>fotosintetik</b> dengan klorofil a dan pigmen fikosianin. Genus <em class="sp">Nostoc</em> dan <em class="sp">Anabaena</em> membentuk filamen dengan sel khusus bernama <b>heterokista</b> untuk mengikat nitrogen dari udara. <em class="sp">Anabaena</em> hidup bersimbiosis dengan paku air <em class="sp">Azolla</em> di sawah.</p></div>
+    </div>
+  </div>
+
+  <div class="block" id="m4">
+    <h2><span class="tag">4</span>Reproduksi bakteri</h2>
+    <p><b>Secara aseksual</b>, bakteri membelah diri melalui <b>pembelahan biner</b>: DNA digandakan, sel memanjang, lalu tengah sel menyempit dan terbagi dua. Pada kondisi ideal, <em class="sp">E. coli</em> bisa membelah sekitar tiap 20 menit.</p>
+    <div class="fis card">
+      <svg id="fisSvg" viewBox="0 0 600 190" role="img" aria-label="Simulasi pembelahan biner"></svg>
+      <div class="ctrl">
+        <label for="gen" class="mono">GENERASI</label>
+        <input type="range" id="gen" min="0" max="5" value="0">
+        <div><span class="big" id="genN">1</span> <span class="mono">sel · waktu <span id="genT">0</span> menit</span></div>
+      </div>
+      <p style="font-size:.9rem;color:var(--muted);margin-bottom:0">Jumlah sel = 2<sup>n</sup>, dengan n banyaknya pembelahan.</p>
+    </div>
+    <p style="margin-top:20px"><b>Rekombinasi genetik</b> menambah variasi, tetapi tidak menambah jumlah sel:</p>
+    <div class="grid2">
+      <div class="card"><h3>Konjugasi</h3><p>Dua sel berhubungan lewat pili seks, lalu DNA (biasanya plasmid) berpindah dari sel donor ke sel penerima.</p></div>
+      <div class="card"><h3>Transformasi</h3><p>Sel mengambil potongan DNA bebas dari lingkungannya, misalnya dari sel bakteri yang telah mati.</p></div>
+      <div class="card"><h3>Transduksi</h3><p>Virus bakteriofag memindahkan potongan DNA dari satu bakteri ke bakteri lain.</p></div>
+      <div class="card"><h3>Endospora</h3><p>Bukan reproduksi. <em class="sp">Bacillus</em> dan <em class="sp">Clostridium</em> membentuk endospora tahan panas saat kondisi buruk, lalu aktif lagi ketika kondisi membaik.</p></div>
+    </div>
+  </div>
+
+  <div class="block" id="m5">
+    <h2><span class="tag">5</span>Peran bakteri</h2>
+    <p>Bakteri berperan besar bagi kehidupan. Pilih kategori untuk menelusuri contohnya.</p>
+    <div class="chips" id="roleChips"><button data-r="all" aria-pressed="true">Semua</button><button data-r="good" aria-pressed="false">Menguntungkan</button><button data-r="bad" aria-pressed="false">Merugikan</button></div>
+    <div class="grid2" id="roleGrid"></div>
+  </div>
+
+  <div class="block" id="m6">
+    <h2><span class="tag">6</span>Ringkasan</h2>
+    <div class="keybox"><ul style="margin:0;padding-left:20px">
+      <li>Bakteri: uniseluler, prokariotik, dinding sel berpeptidoglikan (Eubacteria).</li>
+      <li>Bentuk: kokus, basil, spiral (vibrio, spirilum, spiroket).</li>
+      <li>Gram positif tampak <b>ungu</b>, Gram negatif tampak <b>merah muda</b>.</li>
+      <li>Reproduksi aseksual: pembelahan biner. Variasi genetik: konjugasi, transformasi, transduksi.</li>
+      <li>Peran: dekomposer, fiksasi nitrogen, pangan fermentasi, flora normal usus; juga penyebab penyakit.</li>
+    </ul></div>
+    <p><button class="btn" data-go="latihan">Lanjut ke Latihan Soal</button></p>
+  </div>
+</section>
+
+<!-- ============ LATIHAN ============ -->
+<section class="view" id="v-latihan" hidden>
+  <h2>Latihan Soal</h2>
+  <p class="lead">Pilih satu jawaban. Pembahasan langsung muncul. Latihan ini tidak dinilai, jadi coba sebanyak yang kamu mau.</p>
+  <div class="card" style="margin:16px 0;display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+    <div style="flex:1;min-width:200px"><div class="mono">TERJAWAB <span id="lp">0</span>/8 · BENAR <span id="lc">0</span></div><div class="bar" style="margin-top:8px"><i id="lbar" style="width:0"></i></div></div>
+    <button class="btn alt" id="lreset">Ulangi latihan</button>
+  </div>
+  <div id="lList"></div>
+</section>
+
+<!-- ============ ASESMEN ============ -->
+<section class="view" id="v-asesmen" hidden>
+  <h2>Asesmen</h2>
+  <p class="lead">10 soal pilihan ganda dan 2 soal uraian. Jawab semua, lalu kumpulkan. Pembahasan baru terbuka setelah kamu mengumpulkan.</p>
+  <div class="card" style="margin:16px 0">
+    <label for="nama" class="mono">NAMA</label><br>
+    <input type="text" id="nama" placeholder="Nama lengkap" autocomplete="off" style="margin-top:6px">
+  </div>
+  <div id="aList"></div>
+  <h3 style="margin-top:30px">Soal uraian</h3>
+  <div id="essays"></div>
+  <p style="margin-top:20px"><button class="btn" id="submitA">Kumpulkan jawaban</button> <span id="aWarn" class="mono" style="color:var(--bad);margin-left:8px"></span></p>
+  <div id="result" hidden></div>
+</section>
+
+<footer>
+  Media pembelajaran Biologi Kelas X, SMA Negeri 2 Kalianda. Guru pengampu: Bilkis Nur Izzaty, S.Pd.<br>
+  Foto mikroskop berasal dari Wikimedia Commons (NIAID/NIH, CDC, USDA-ARS, Dartmouth Electron Microscope Facility, dan kontributor lain) berlisensi domain publik atau Creative Commons; kredit tertera di bawah tiap foto. Selaraskan rincian CP dan tujuan pembelajaran dengan dokumen resmi sekolah.
+</footer>
+</div>
+
+<script>
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* ---------- Foto ---------- */
+const PHOTOS={
+ ecoli:{sp:'Escherichia coli',file:'E coli at 10000x, original.jpg',tipe:'Mikrograf elektron, 10.000×',kredit:'Eric Erbe & Christopher Pooley, USDA-ARS (domain publik)'},
+ staph:{sp:'Staphylococcus aureus',file:'Staphylococcus aureus, 50,000x, USDA, ARS, EMU.jpg',tipe:'Mikrograf elektron, 50.000×',kredit:'Erbe & Pooley, USDA-ARS-EMU'},
+ pylori:{sp:'Helicobacter pylori',file:'EMpylori.jpg',tipe:'Mikrograf elektron, pewarnaan negatif',kredit:'Yutaka Tsutsumi, M.D. (izin penggunaan bebas)'},
+ vibrio:{sp:'Vibrio cholerae',file:'Cholera bacteria SEM.jpg',tipe:'Mikrograf elektron pindai (SEM)',kredit:'Taylor, Kirn & Howard, Dartmouth EM Facility (domain publik)'},
+ salmonella:{sp:'Salmonella typhimurium',file:'SalmonellaNIAID.jpg',tipe:'SEM berwarna menyerang sel manusia',kredit:'Rocky Mountain Laboratories, NIAID/NIH (domain publik)'},
+ tb:{sp:'Mycobacterium tuberculosis',file:'Mycobacterium tuberculosis 8438 lores.jpg',tipe:'SEM, 15.549×',kredit:'CDC / Janice Haney Carr (domain publik)'},
+ lacto:{sp:'Lactobacillus reuteri',file:'L. reuteri.jpg',tipe:'Pewarnaan Gram, mikroskop cahaya 1000×',kredit:'Wikimedia Commons, lisensi CC BY 4.0'},
+ gram:{sp:'Pewarnaan Gram',file:'Gram stain 01.jpg',tipe:'Campuran S. aureus (ungu) dan E. coli (merah), 1000×',kredit:'Y tambe, Wikimedia Commons, CC BY-SA'},
+ nostoc:{sp:'Nostoc communis',file:'Nostoc communis003.jpg',tipe:'Koloni sianobakteri berlendir',kredit:'Victor M. Vicente Selvas (domain publik)'}
+};
+const uploaded={};
+function photo(k){
+  const p=PHOTOS[k]; const src=uploaded[k]||('https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(p.file)+'?width=640');
+  return `<figure class="photo" data-k="${k}"><div class="frame">
+    <img src="${src}" alt="Foto mikroskop ${esc(p.sp)}" loading="lazy" onerror="this.remove();this.parentNode&&0">
+    <canvas class="ill" data-ill="${k}" width="640" height="480" role="img" aria-label="Ilustrasi ${esc(p.sp)}"></canvas>
+    </div><figcaption><span><b><em class="sp">${esc(p.sp)}</em></b> · ${esc(p.tipe)}</span><span>${uploaded[k]?'Foto unggahan sendiri.':'Ilustrasi komputer bergaya mikroskop, bukan foto asli. Foto asli: '+esc(p.kredit)}</span>
+    <label class="up">Ganti dengan foto sendiri<input type="file" accept="image/*" data-up="${k}"></label></figcaption></figure>`;
+}
+/* image tag hides placeholder when loaded: placeholder sits under image via grid stacking */
+const st=document.createElement('style');
+st.textContent='.photo .frame>*{grid-area:1/1}.photo .frame img{position:relative;z-index:1}.photo canvas.ill{width:100%;height:100%;display:block}';
+document.head.appendChild(st);
+document.addEventListener('change',e=>{
+  const k=e.target.dataset&&e.target.dataset.up; if(!k||!e.target.files[0])return;
+  const r=new FileReader(); r.onload=()=>{uploaded[k]=r.result; renderPhotos();}; r.readAsDataURL(e.target.files[0]);
+});
+function renderPhotos(){
+  $('#gramPhoto').innerHTML=GRAM_HTML; fillGram(); $('#nostocPhoto').innerHTML=photo('nostoc');
+  renderShape(shapeKey); renderRoles(roleKey);
+}
+
+/* ---------- Navigasi ---------- */
+const views=['awal','materi','latihan','asesmen'];
+function show(v,scrollTo){
+  if(!views.includes(v))v='awal';
+  views.forEach(x=>{$('#v-'+x).hidden=x!==v;$('#t-'+x).setAttribute('aria-selected',x===v)});
+  try{history.replaceState(null,'','#'+v)}catch(e){}
+  if(scrollTo){const el=$('#'+scrollTo);el&&el.scrollIntoView({behavior:'smooth'})}else window.scrollTo(0,0);
+}
+$$('nav.tabs button').forEach(b=>b.onclick=()=>show(b.dataset.v));
+$$('[data-go]').forEach(b=>b.onclick=()=>show(b.dataset.go));
+$$('.toc a').forEach(a=>a.onclick=e=>{e.preventDefault();$('#'+a.dataset.s).scrollIntoView({behavior:'smooth'})});
+
+/* ---------- Struktur sel ---------- */
+const PARTS={
+ sitoplasma:['Sitoplasma','Cairan kental berisi air, enzim, garam, dan nutrien di dalam membran plasma. Di sinilah sebagian besar reaksi metabolisme berlangsung, dan di dalamnya melayang nukleoid, plasmid, serta ribosom. Pada bakteri, sitoplasma tidak dibagi oleh organel bermembran.'],
+ kapsul:['Kapsul','Lapisan lendir di luar dinding sel pada sebagian bakteri. Melindungi dari kekeringan dan sel imun, dan membantu menempel pada permukaan.'],
+ dinding:['Dinding sel','Tersusun dari peptidoglikan. Memberi bentuk dan melindungi sel dari pecah. Tebal pada Gram positif, tipis pada Gram negatif.'],
+ membran:['Membran plasma','Mengatur keluar masuk zat. Pada bakteri, membran ini juga menjadi tempat reaksi pembentukan energi karena tidak ada mitokondria.'],
+ nukleoid:['Nukleoid','Daerah berisi DNA kromosom berbentuk melingkar. Tidak dibungkus membran inti, itulah ciri prokariot.'],
+ plasmid:['Plasmid','DNA kecil melingkar di luar kromosom. Sering membawa gen resistensi antibiotik dan dapat berpindah saat konjugasi.'],
+ ribosom:['Ribosom','Tempat sintesis protein. Ribosom bakteri berukuran 70S, lebih kecil daripada ribosom sel eukariot.'],
+ flagel:['Flagel','Cambuk panjang untuk bergerak. Letaknya bervariasi: monotrik, lofotrik, amfitrik, peritrik.'],
+ pili:['Pili / fimbria','Rambut halus untuk menempel pada permukaan. Pili seks berperan pada konjugasi.']
+};
+function showPart(k){
+  $('#partinfo').innerHTML=`<h3>${PARTS[k][0]}</h3><p>${PARTS[k][1]}</p>`;
+  $$('#parts button').forEach(b=>b.classList.toggle('on',b.dataset.p===k));
+  $$('.cellwrap .hot').forEach(h=>h.classList.toggle('on',h.dataset.p===k));
+}
+$('#parts').innerHTML=Object.keys(PARTS).map(k=>`<button data-p="${k}">${PARTS[k][0]}</button>`).join('');
+$('#parts').onclick=e=>{const b=e.target.closest('button');b&&showPart(b.dataset.p)};
+$$('.cellwrap .hot').forEach(h=>h.onclick=()=>showPart(h.dataset.p));
+showPart('nukleoid');
+
+/* ---------- Bentuk ---------- */
+const SHAPES={
+ coccus:{img:'staph',judul:'Kokus (bulat)',isi:'Sel berbentuk bola atau lonjong dengan diameter sekitar 0,5–1,0 µm. Susunannya penting untuk identifikasi.',list:['Diplokokus: berpasangan dua-dua','Streptokokus: berantai seperti kalung','Stafilokokus: bergerombol seperti anggur','Tetrad: empat sel membentuk kotak','Sarsina: delapan sel membentuk kubus']},
+ bacillus:{img:'ecoli',judul:'Basil (batang)',isi:'Sel berbentuk batang, lebar sekitar 0,5–1,0 µm dan panjang 1–4 µm. Banyak bakteri penting berbentuk basil.',list:['Basil tunggal','Diplobasil: dua batang berpasangan','Streptobasil: batang berantai','Kokobasil: batang pendek mirip kokus']},
+ spiral:{img:'pylori',judul:'Spiral (lengkung)',isi:'Sel melengkung atau berpilin. Foto menunjukkan Helicobacter pylori dengan sejumlah flagel di salah satu ujung, penyebab radang dan tukak lambung.',list:['Vibrio: bentuk koma, contoh Vibrio cholerae','Spirilum: spiral kaku dengan flagel','Spiroket: spiral lentur, contoh Treponema pallidum']}
+};
+let shapeKey='coccus';
+function renderShape(k){
+  shapeKey=k; const s=SHAPES[k];
+  $$('#shapeSeg button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.k===k));
+  $('#shapeBody').innerHTML=photo(s.img)+`<div class="card"><h3>${s.judul}</h3><p>${s.isi}</p><ul style="padding-left:20px;margin:8px 0 0">${s.list.map(x=>`<li>${x}</li>`).join('')}</ul></div>`;
+}
+$('#shapeSeg').onclick=e=>{const b=e.target.closest('button');b&&renderShape(b.dataset.k)};
+
+/* ---------- Pembelahan biner ---------- */
+function drawFission(n){
+  const count=2**n, svg=$('#fisSvg'); let out='';
+  const cols=Math.min(count,8), rows=Math.ceil(count/8);
+  const cw=600/cols, ch=190/rows;
+  for(let i=0;i<count;i++){
+    const c=i%8, r=Math.floor(i/8);
+    const w=Math.min(cw*.7,count>8?60:90), h=Math.min(ch*.45,count>8?22:34);
+    const x=c*cw+cw/2, y=r*ch+ch/2;
+    out+=`<rect x="${x-w/2}" y="${y-h/2}" width="${w}" height="${h}" rx="${h/2}" fill="#5a2d8c" opacity=".88"/>`;
+    out+=`<circle cx="${x-w/6}" cy="${y}" r="${h/5}" fill="#fff" opacity=".7"/>`;
+  }
+  svg.innerHTML=out; $('#genN').textContent=count; $('#genT').textContent=n*20;
+}
+$('#gen').oninput=e=>drawFission(+e.target.value); drawFission(0);
+
+/* ---------- Peran ---------- */
+const ROLES=[
+ {t:'good',img:'lacto',nama:'Lactobacillus',teks:'Bakteri asam laktat yang mengubah laktosa susu menjadi asam laktat, dasar pembuatan yoghurt dan keju. Juga bagian dari flora normal usus.'},
+ {t:'good',img:'nostoc',nama:'Nostoc dan Anabaena',teks:'Sianobakteri pengikat nitrogen udara. Anabaena bersimbiosis dengan Azolla sehingga menyuburkan sawah.'},
+ {t:'good',img:'ecoli',nama:'Escherichia coli (galur normal)',teks:'Hidup di usus besar, membantu membusukkan sisa makanan dan menghasilkan vitamin K. Beberapa galurnya, seperti O157:H7, bersifat patogen.'},
+ {t:'good',nama:'Rhizobium',teks:'Hidup dalam bintil akar kacang-kacangan dan mengubah N₂ udara menjadi amonia yang dapat diserap tumbuhan. Mengurangi kebutuhan pupuk kimia.'},
+ {t:'good',nama:'Pengurai dan bioremediasi',teks:'Bakteri dekomposer mengurai bangkai dan serasah menjadi unsur hara. Sebagian bakteri dipakai untuk membersihkan limbah dan tumpahan minyak.'},
+ {t:'bad',img:'vibrio',nama:'Vibrio cholerae',teks:'Penyebab kolera, menyebar lewat air dan makanan tercemar. Pencegahan: air bersih yang direbus, sanitasi, cuci tangan.'},
+ {t:'bad',img:'salmonella',nama:'Salmonella',teks:'Menyebabkan tifus (S. typhi) dan keracunan makanan. Menyebar lewat makanan yang tidak matang atau tercemar.'},
+ {t:'bad',img:'tb',nama:'Mycobacterium tuberculosis',teks:'Penyebab tuberkulosis (TBC) paru. Menular lewat percikan dahak. Pengobatannya memakan waktu berbulan-bulan dan harus tuntas.'},
+ {t:'bad',img:'staph',nama:'Staphylococcus aureus',teks:'Penyebab bisul, infeksi luka, dan keracunan makanan. Galur MRSA kebal terhadap banyak antibiotik.'},
+ {t:'bad',img:'pylori',nama:'Helicobacter pylori',teks:'Hidup di lambung dan berkaitan dengan gastritis dan tukak lambung.'}
+];
+let roleKey='all';
+function renderRoles(k){
+  roleKey=k; $$('#roleChips button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.r===k));
+  $('#roleGrid').innerHTML=ROLES.filter(r=>k==='all'||r.t===k).map(r=>`<div class="card role">
+   <span class="badge ${r.t}">${r.t==='good'?'Menguntungkan':'Merugikan'}</span>
+   ${r.img?photo(r.img):''}<h3><em class="sp">${esc(r.nama)}</em></h3><p style="margin:0">${esc(r.teks)}</p></div>`).join('');
+}
+$('#roleChips').onclick=e=>{const b=e.target.closest('button');b&&renderRoles(b.dataset.r)};
+
+/* ---------- Soal ---------- */
+const LAT=[
+ {q:'Bakteri digolongkan sebagai prokariot karena sel bakteri…',o:['memiliki dinding sel dari selulosa','tidak memiliki membran inti dan organel bermembran','hanya dapat hidup di lingkungan ekstrem','berukuran lebih dari 10 µm'],a:1,e:'Prokariot berarti materi genetik tidak dibungkus membran inti dan tidak ada organel bermembran.'},
+ {q:'Sel bakteri berbentuk bulat yang tersusun berantai seperti kalung disebut…',o:['Stafilokokus','Diplokokus','Streptokokus','Sarsina'],a:2,e:'Streptokokus tersusun berantai. Stafilokokus bergerombol, diplokokus berpasangan, sarsina berkelompok delapan.'},
+ {q:'Bagian sel bakteri yang tersusun dari peptidoglikan dan menentukan bentuk sel adalah…',o:['kapsul','membran plasma','nukleoid','dinding sel'],a:3,e:'Peptidoglikan adalah penyusun utama dinding sel Eubacteria.'},
+ {q:'Bakteri Gram positif tampak ungu setelah pewarnaan Gram karena…',o:['tidak memiliki dinding sel','peptidoglikan tebal menahan kristal violet','memiliki membran luar yang melarutkan zat warna','menyerap safranin lebih banyak'],a:1,e:'Dinding peptidoglikan yang tebal menahan kristal violet meski dicuci alkohol. Gram negatif kehilangan warna ungu dan tampak merah muda oleh safranin.'},
+ {q:'Satu bakteri membelah biner setiap 20 menit. Jumlah sel setelah 1 jam adalah…',o:['3 sel','6 sel','8 sel','16 sel'],a:2,e:'1 jam = 3 pembelahan. Jumlah sel = 2³ = 8.'},
+ {q:'Rhizobium bersimbiosis dengan akar kacang-kacangan dan berperan dalam…',o:['fotosintesis','fiksasi nitrogen','pembuatan antibiotik','penguraian selulosa'],a:1,e:'Rhizobium dalam bintil akar mengubah N₂ udara menjadi amonia yang dipakai tumbuhan.'},
+ {q:'Bakteri yang berperan dalam pembuatan yoghurt adalah…',o:['Lactobacillus','Salmonella','Vibrio','Mycobacterium'],a:0,e:'Lactobacillus mengubah laktosa menjadi asam laktat sehingga susu menggumpal dan asam.'},
+ {q:'Perpindahan plasmid dari satu bakteri ke bakteri lain melalui pili seks disebut…',o:['transformasi','transduksi','konjugasi','pembelahan biner'],a:2,e:'Konjugasi memakai pili seks. Transformasi mengambil DNA bebas, transduksi lewat virus bakteriofag.'}
+];
+const ASM=[
+ {q:'Pernyataan yang benar tentang Archaebacteria adalah…',o:['dinding selnya mengandung peptidoglikan','semuanya bersifat patogen','banyak ditemukan di lingkungan ekstrem','memiliki membran inti'],a:2,e:'Archaebacteria banyak hidup di habitat ekstrem dan dinding selnya tanpa peptidoglikan.'},
+ {q:'Helicobacter pylori yang berbentuk spiral dan hidup di lambung dapat menyebabkan…',o:['kolera','tukak lambung','tuberkulosis','tetanus'],a:1,e:'H. pylori berkaitan dengan gastritis dan tukak lambung.'},
+ {q:'Ciri yang tepat untuk sianobakteri adalah…',o:['heterotrof dan tanpa klorofil','berfotosintesis dan sebagian mengikat nitrogen lewat heterokista','berinti sejati dan berklorofil b','selalu bersifat parasit'],a:1,e:'Sianobakteri berfotosintesis; Nostoc dan Anabaena mempunyai heterokista untuk fiksasi nitrogen.'},
+ {q:'Bakteri dengan sekumpulan flagel pada salah satu ujung sel disebut berflagel…',o:['monotrik','lofotrik','amfitrik','peritrik'],a:1,e:'Lofotrik: sekelompok flagel di satu ujung. Monotrik satu flagel, amfitrik di dua ujung, peritrik di seluruh permukaan.'},
+ {q:'Penyebab penyakit tuberkulosis (TBC) adalah…',o:['Salmonella typhi','Vibrio cholerae','Mycobacterium tuberculosis','Staphylococcus aureus'],a:2,e:'TBC disebabkan oleh Mycobacterium tuberculosis. Salmonella typhi menyebabkan tifus, Vibrio cholerae kolera.'},
+ {q:'Saat kondisi lingkungan buruk, Bacillus dan Clostridium bertahan dengan membentuk…',o:['kapsul tipis','endospora','plasmid baru','flagel tambahan'],a:1,e:'Endospora tahan panas dan kekeringan, lalu tumbuh lagi ketika kondisi membaik.'},
+ {q:'Bakteri mengambil potongan DNA bebas dari lingkungannya. Proses ini disebut…',o:['konjugasi','transduksi','transformasi','fragmentasi'],a:2,e:'Transformasi adalah pengambilan DNA bebas dari lingkungan.'},
+ {q:'Peran bakteri dekomposer dalam ekosistem adalah…',o:['mengubah senyawa anorganik menjadi bahan organik dengan cahaya','mengurai bahan organik mati menjadi unsur hara yang kembali ke tanah','menyerang sel inang dan menghasilkan toksin','membentuk simbiosis di akar dengan jamur'],a:1,e:'Dekomposer mengembalikan unsur hara dari bahan organik mati ke lingkungan.'},
+ {q:'Sebuah desa mengalami diare massal setelah banjir. Penyebab yang paling mungkin dan langkah pencegahan yang tepat adalah…',o:['Vibrio cholerae; merebus air minum dan menjaga sanitasi','Rhizobium; memberi pupuk hijau','Lactobacillus; mengurangi konsumsi yoghurt','Nostoc; membersihkan sawah'],a:0,e:'Diare massal pascabanjir sering terkait kolera lewat air tercemar. Air direbus, sanitasi, dan cuci tangan mencegahnya.'},
+ {q:'Sebuah biakan berisi 500 sel dan menggandakan jumlahnya tiap 30 menit. Jumlah sel setelah 2 jam adalah…',o:['2.000 sel','4.000 sel','8.000 sel','10.000 sel'],a:2,e:'2 jam = 4 pembelahan, 500 × 2⁴ = 8.000 sel.'}
+];
+const ESSAYS=[
+ {q:'Mengapa antibiotik bisa menjadi tidak efektif terhadap suatu bakteri? Kaitkan dengan plasmid dan konjugasi.',k:'Kunci: gen resistensi sering berada pada plasmid; lewat konjugasi plasmid berpindah antarbakteri sehingga resistensi menyebar; pemakaian antibiotik yang tidak tuntas menyeleksi bakteri resisten.'},
+ {q:'Jelaskan peran bakteri di lingkunganmu (rumah, sekolah, atau Kalianda) dan satu cara menjaga agar bakteri patogen tidak membahayakan.',k:'Kunci: sebutkan satu peran menguntungkan (misalnya dekomposer atau fermentasi) dan satu tindakan higienis (cuci tangan, air matang, makanan tertutup). Jawaban kontekstual yang masuk akal diterima.'}
+];
+const L='ABCD';
+function qHTML(list,pre){return list.map((it,i)=>`<div class="q" id="${pre}${i}"><div class="num">SOAL ${i+1}</div><p class="stem">${esc(it.q)}</p><div class="opts">${it.o.map((o,j)=>`<button class="opt" data-i="${i}" data-j="${j}"><span class="l">${L[j]}</span><span>${esc(o)}</span></button>`).join('')}</div><div class="fbslot"></div></div>`).join('')}
+
+/* latihan */
+let lAns={};
+function renderLat(){
+  lAns={}; $('#lList').innerHTML=qHTML(LAT,'l'); upd();
+}
+function upd(){
+  const n=Object.keys(lAns).length, c=Object.entries(lAns).filter(([i,j])=>LAT[i].a===j).length;
+  $('#lp').textContent=n;$('#lc').textContent=c;$('#lbar').style.width=(n/LAT.length*100)+'%';
+}
+$('#lList').onclick=e=>{
+  const b=e.target.closest('.opt'); if(!b)return;
+  const i=+b.dataset.i,j=+b.dataset.j; if(i in lAns)return;
+  lAns[i]=j; const it=LAT[i], box=$('#l'+i);
+  $$('.opt',box).forEach(o=>{o.disabled=true;const jj=+o.dataset.j; if(jj===it.a)o.classList.add('right'); else if(jj===j)o.classList.add('wrong')});
+  $('.fbslot',box).innerHTML=`<div class="fb ${j===it.a?'ok':'no'}"><b>${j===it.a?'Benar.':'Belum tepat.'}</b> ${esc(it.e)}</div>`;
+  upd();
+};
+$('#lreset').onclick=renderLat; renderLat();
+
+/* asesmen */
+let aAns={}, done=false;
+function renderAsm(){
+  aAns={};done=false;$('#result').hidden=true;$('#aWarn').textContent='';$('#submitA').disabled=false;$('#submitA').textContent='Kumpulkan jawaban';
+  $('#aList').innerHTML=qHTML(ASM,'a');
+  $('#essays').innerHTML=ESSAYS.map((s,i)=>`<div class="q"><div class="num">URAIAN ${i+1}</div><p class="stem">${esc(s.q)}</p><textarea id="es${i}" aria-label="Jawaban uraian ${i+1}" placeholder="Tulis jawabanmu di sini"></textarea><div class="fbslot" id="esk${i}"></div></div>`).join('');
+}
+$('#aList').onclick=e=>{
+  if(done)return; const b=e.target.closest('.opt'); if(!b)return;
+  const i=+b.dataset.i,j=+b.dataset.j; aAns[i]=j;
+  $$('.opt',$('#a'+i)).forEach(o=>o.classList.toggle('sel',+o.dataset.j===j));
+};
+$('#submitA').onclick=()=>{
+  if(done)return;
+  const miss=ASM.map((_,i)=>i).filter(i=>!(i in aAns));
+  if(miss.length){$('#aWarn').textContent='Belum dijawab: soal '+miss.map(i=>i+1).join(', ');$('#a'+miss[0]).scrollIntoView({behavior:'smooth',block:'center'});return}
+  done=true; let benar=0;
+  ASM.forEach((it,i)=>{
+    const box=$('#a'+i); const ok=aAns[i]===it.a; if(ok)benar++;
+    $$('.opt',box).forEach(o=>{o.disabled=true;o.classList.remove('sel');const jj=+o.dataset.j;if(jj===it.a)o.classList.add('right');else if(jj===aAns[i])o.classList.add('wrong')});
+    $('.fbslot',box).innerHTML=`<div class="fb ${ok?'ok':'no'}"><b>${ok?'Benar.':'Jawaban benar: '+L[it.a]+'.'}</b> ${esc(it.e)}</div>`;
+  });
+  ESSAYS.forEach((s,i)=>{$('#esk'+i).innerHTML=`<div class="fb ok" style="margin-top:12px">${esc(s.k)}</div>`;$('#es'+i).readOnly=true});
+  const skor=Math.round(benar/ASM.length*100);
+  const pred=skor>=85?'Sangat baik':skor>=70?'Baik':skor>=55?'Cukup, pelajari kembali bagian yang salah':'Perlu mengulang materi';
+  const nama=$('#nama').value.trim()||'Peserta didik';
+  const C=2*Math.PI*52, off=C*(1-skor/100);
+  const r=$('#result'); r.hidden=false;
+  r.innerHTML=`<div class="card score"><svg class="ring" viewBox="0 0 130 130" role="img" aria-label="Skor ${skor}"><circle cx="65" cy="65" r="52" fill="none" stroke="var(--surface2)" stroke-width="12"/><circle cx="65" cy="65" r="52" fill="none" stroke="var(--violet)" stroke-width="12" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${off}" transform="rotate(-90 65 65)"/><text x="65" y="74" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-weight="700" font-size="30" fill="var(--fg)">${skor}</text></svg>
+  <div style="flex:1;min-width:220px"><div class="eyebrow">Hasil asesmen</div><h3 style="margin:4px 0">${esc(nama)}</h3><p style="margin:0">${benar} dari ${ASM.length} pilihan ganda benar. Predikat: <b>${pred}</b>.</p><p style="color:var(--muted);font-size:.9rem">Soal uraian dinilai oleh guru. Bandingkan jawabanmu dengan kunci di bawah tiap soal uraian.</p><button class="btn alt" id="again">Kerjakan ulang</button></div></div>`;
+  $('#again').onclick=()=>{renderAsm();window.scrollTo(0,0)};
+  $('#submitA').disabled=true;$('#submitA').textContent='Sudah dikumpulkan';
+  r.scrollIntoView({behavior:'smooth',block:'center'});
+};
+renderAsm();
+
+/* ---------- Ilustrasi bergaya mikrograf (dibuat dengan kode) ---------- */
+function rng(s){return function(){s|=0;s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const IW=640,IH=480;
+function ball(x,cx,cy,r,h,s,l){
+  const g=x.createRadialGradient(cx-r*.35,cy-r*.4,r*.1,cx,cy,r);
+  g.addColorStop(0,`hsl(${h} ${s}% ${Math.min(l+30,94)}%)`);g.addColorStop(.55,`hsl(${h} ${s}% ${l}%)`);g.addColorStop(1,`hsl(${h} ${s}% ${Math.max(l-30,4)}%)`);
+  x.fillStyle=g;x.beginPath();x.arc(cx,cy,r,0,7);x.fill();
+}
+function tube(x,pts,r,h,s,l){
+  for(let i=0;i<pts.length-1;i++){const a=pts[i],b=pts[i+1];const n=Math.max(2,Math.ceil(Math.hypot(b[0]-a[0],b[1]-a[1])/(r*.3)));
+    for(let j=0;j<=n;j++)ball(x,a[0]+(b[0]-a[0])*j/n,a[1]+(b[1]-a[1])*j/n,r,h,s,l)}
+}
+function rod(x,cx,cy,len,ang,r,h,s,l){const dx=Math.cos(ang)*(len/2-r),dy=Math.sin(ang)*(len/2-r);tube(x,[[cx-dx,cy-dy],[cx+dx,cy+dy]],r,h,s,l)}
+function curve(p0,p1,p2,n){const o=[];for(let i=0;i<=n;i++){const t=i/n,u=1-t;o.push([u*u*p0[0]+2*u*t*p1[0]+t*t*p2[0],u*u*p0[1]+2*u*t*p1[1]+t*t*p2[1]])}return o}
+function flag(x,x0,y0,ang,len,col,R){
+  x.strokeStyle=col;x.lineWidth=2;x.lineCap='round';x.beginPath();x.moveTo(x0,y0);
+  const ph=R()*6,amp=5+R()*5;
+  for(let i=1;i<=24;i++){const d=len*i/24,w=Math.sin(ph+i*.6)*amp*(i/24);x.lineTo(x0+Math.cos(ang)*d-Math.sin(ang)*w,y0+Math.sin(ang)*d+Math.cos(ang)*w)}
+  x.stroke();
+}
+function illus(c,k){
+  if(c.dataset.done)return; c.dataset.done=1;
+  const x=c.getContext('2d'),R=rng(k.split('').reduce((a,ch)=>a*31+ch.charCodeAt(0),7));
+  const light=['lacto','gram','nostoc'].includes(k);
+  const bgH={ecoli:200,staph:275,pylori:165,vibrio:215,salmonella:225,tb:190}[k];
+  if(light){const g=x.createRadialGradient(IW/2,IH/2,40,IW/2,IH/2,420);
+    const c0={lacto:'hsl(330 35% 94%)',gram:'hsl(40 25% 95%)',nostoc:'hsl(170 35% 91%)'}[k],c1={lacto:'hsl(330 30% 84%)',gram:'hsl(40 20% 84%)',nostoc:'hsl(170 30% 78%)'}[k];
+    g.addColorStop(0,c0);g.addColorStop(1,c1);x.fillStyle=g;x.fillRect(0,0,IW,IH);
+  }else{const g=x.createRadialGradient(IW/2,IH/2,30,IW/2,IH/2,420);g.addColorStop(0,`hsl(${bgH} 30% 24%)`);g.addColorStop(1,`hsl(${bgH} 35% 6%)`);x.fillStyle=g;x.fillRect(0,0,IW,IH)}
+  const px=()=>R()*IW, py=()=>R()*IH;
+  const blur=(on)=>{try{x.filter=on?'blur(3px)':'none'}catch(e){}};
+  if(k==='ecoli'){
+    blur(true);for(let i=0;i<10;i++)rod(x,px(),py(),90,R()*3.14,13,28,45,22);blur(false);
+    for(let i=0;i<14;i++)rod(x,px(),py(),95+R()*40,R()*3.14,17,30,85,48);
+  }else if(k==='staph'){
+    blur(true);for(let i=0;i<14;i++)ball(x,px(),py(),20,48,50,24);blur(false);
+    for(let q=0;q<6;q++){let cx=80+R()*480,cy=70+R()*340;const n=7+Math.floor(R()*8);
+      for(let i=0;i<n;i++){cx+=(R()-.5)*38;cy+=(R()-.5)*38;ball(x,cx,cy,24,46,85,50)}}
+  }else if(k==='pylori'){
+    for(let i=0;i<4;i++){const y0=70+i*105+R()*30,x0=60+R()*120;
+      const pts=[];const len=260+R()*80;for(let t=0;t<=len;t+=4)pts.push([x0+t,y0+Math.sin(t/38)*26+Math.sin(t/90)*10]);
+      tube(x,pts,12,8,80,45);const e=pts[pts.length-1];
+      for(let f=0;f<5;f++)flag(x,e[0],e[1],-.35+f*.18+(R()-.5)*.2,110+R()*50,'hsl(30 70% 75%)',R);}
+  }else if(k==='vibrio'){
+    for(let i=0;i<6;i++){const cx=px()*.85+50,cy=py()*.85+40,a=R()*6.28,L=70+R()*20;
+      const p0=[cx-Math.cos(a)*L,cy-Math.sin(a)*L],p2=[cx+Math.cos(a)*L,cy+Math.sin(a)*L];
+      const mid=[cx-Math.sin(a)*38,cy+Math.cos(a)*38];
+      tube(x,curve(p0,mid,p2,30),15,130,65,44);flag(x,p2[0],p2[1],a+.2,150,'hsl(130 40% 70%)',R)}
+  }else if(k==='salmonella'){
+    for(let i=0;i<7;i++){const cx=80+R()*480,cy=70+R()*340,a=R()*3.14,L=110;
+      for(let f=0;f<10;f++){const t=R()*2-1;flag(x,cx+Math.cos(a)*t*L*.5,cy+Math.sin(a)*t*L*.5,a+(R()<.5?1:-1)*(1.2+R()*.6),70+R()*70,'hsl(350 60% 78%)',R)}
+      rod(x,cx,cy,L,a,17,350,75,46)}
+  }else if(k==='tb'){
+    for(let i=0;i<15;i++){const cx=px(),cy=py(),a=R()*6.28,L=120+R()*60;
+      const p0=[cx-Math.cos(a)*L,cy-Math.sin(a)*L],p2=[cx+Math.cos(a)*L,cy+Math.sin(a)*L];
+      tube(x,curve(p0,[cx+(R()-.5)*60,cy+(R()-.5)*60],p2,30),9,125,60,44)}
+  }else if(k==='lacto'){
+    for(let i=0;i<9;i++){x.fillStyle='hsl(335 45% 76% / .35)';x.beginPath();x.ellipse(px(),py(),50+R()*40,35+R()*30,R()*3,0,7);x.fill()}
+    for(let i=0;i<40;i++){const L=34+R()*34,cx=px(),cy=py(),a=R()*3.14;rod(x,cx,cy,L,a,7,272,55,32);
+      if(R()<.4)rod(x,cx+Math.cos(a)*(L+3),cy+Math.sin(a)*(L+3),L*.9,a+(R()-.5)*.3,7,272,55,32)}
+  }else if(k==='gram'){
+    for(let i=0;i<34;i++)rod(x,px(),py(),38+R()*14,R()*3.14,7,340,70,56);
+    for(let q=0;q<9;q++){let cx=px(),cy=py();const n=3+Math.floor(R()*6);
+      for(let i=0;i<n;i++){cx+=(R()-.5)*18;cy+=(R()-.5)*18;ball(x,cx,cy,9,268,60,30)}}
+  }else if(k==='nostoc'){
+    for(let f=0;f<7;f++){let cx=R()*IW,cy=R()*IH,a=R()*6.28;const n=26+Math.floor(R()*14);
+      for(let i=0;i<n;i++){a+=(R()-.5)*.55;cx+=Math.cos(a)*19;cy+=Math.sin(a)*19;
+        if(i%9===5)ball(x,cx,cy,15,85,50,62);else ball(x,cx,cy,11,165,55,38)}}
+  }
+  // butiran dan vinyet
+  const id=x.getImageData(0,0,IW,IH),d=id.data,amt=light?14:28;
+  for(let i=0;i<d.length;i+=4){const n=(R()-.5)*amt;d[i]+=n;d[i+1]+=n;d[i+2]+=n}
+  x.putImageData(id,0,0);
+  const v=x.createRadialGradient(IW/2,IH/2,180,IW/2,IH/2,430);v.addColorStop(0,'rgba(0,0,0,0)');v.addColorStop(1,light?'rgba(30,20,40,.18)':'rgba(0,0,0,.55)');
+  x.fillStyle=v;x.fillRect(0,0,IW,IH);
+  x.font='600 13px monospace';const t='ILUSTRASI · bukan foto asli';const w=x.measureText(t).width;
+  x.fillStyle='rgba(0,0,0,.6)';x.fillRect(10,IH-34,w+16,24);x.fillStyle='#fff';x.fillText(t,18,IH-17);
+}
+function drawIlls(){$$('canvas[data-ill]').forEach(c=>illus(c,c.dataset.ill))}
+let illT=0;new MutationObserver(()=>{cancelAnimationFrame(illT);illT=requestAnimationFrame(drawIlls)}).observe(document.body,{childList:true,subtree:true});
+
+/* ---------- Gambar Gram positif vs negatif ---------- */
+const GRAM_HTML=`<div class="card gramfig" style="--c:var(--violet);padding:12px">
+<svg viewBox="-24 0 644 410" role="img" aria-label="Perbandingan bakteri Gram positif dan Gram negatif: tampilan mikroskop dan penampang dinding sel" style="width:100%;height:auto;display:block;color:var(--fg);background:none;border:0">
+<defs>
+ <radialGradient id="gPur" cx=".35" cy=".3" r=".85"><stop offset="0" stop-color="#b48be8"/><stop offset=".6" stop-color="#6a38b0"/><stop offset="1" stop-color="#34165f"/></radialGradient>
+ <radialGradient id="gPnk" cx=".3" cy=".3" r=".9"><stop offset="0" stop-color="#f9b6cf"/><stop offset=".6" stop-color="#d9477f"/><stop offset="1" stop-color="#8f1f4d"/></radialGradient>
+ <radialGradient id="fieldP" cx=".5" cy=".5" r=".6"><stop offset="0" stop-color="#fdfaf3"/><stop offset="1" stop-color="#e9dfef"/></radialGradient>
+ <clipPath id="clipP"><circle cx="180" cy="95" r="78"/></clipPath><clipPath id="clipN"><circle cx="410" cy="95" r="78"/></clipPath>
+ <pattern id="pgPat" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="12" height="12" fill="#e5a93d"/><path d="M0 0L12 12M12 0L0 12" stroke="#9c6a14" stroke-width="1.2" opacity=".75"/></pattern>
+ <pattern id="lipG" width="10" height="20" patternUnits="userSpaceOnUse"><rect width="10" height="20" fill="#3fa578"/><circle cx="5" cy="4" r="3.2" fill="#d5f5e3" stroke="#1f6f4b" stroke-width=".6"/><circle cx="5" cy="16" r="3.2" fill="#d5f5e3" stroke="#1f6f4b" stroke-width=".6"/><path d="M5 7.2V12.8" stroke="#1f6f4b" stroke-width="1"/></pattern>
+ <pattern id="lipP" width="10" height="20" patternUnits="userSpaceOnUse"><rect width="10" height="20" fill="#c93a73"/><circle cx="5" cy="4" r="3.2" fill="#fbd0e1" stroke="#7d1f45" stroke-width=".6"/><circle cx="5" cy="16" r="3.2" fill="#fbd0e1" stroke="#7d1f45" stroke-width=".6"/><path d="M5 7.2V12.8" stroke="#7d1f45" stroke-width="1"/></pattern>
+</defs>
+<!-- bidang mikroskop -->
+<circle cx="180" cy="95" r="82" fill="#2b2b33"/><circle cx="180" cy="95" r="78" fill="url(#fieldP)"/><g clip-path="url(#clipP)" id="gF1"></g>
+<circle cx="410" cy="95" r="82" fill="#2b2b33"/><circle cx="410" cy="95" r="78" fill="url(#fieldP)"/><g clip-path="url(#clipN)" id="gF2"></g>
+<g text-anchor="middle" font-family="Bricolage Grotesque,Trebuchet MS,sans-serif">
+ <text x="180" y="198" font-size="17" font-weight="700" fill="#7a45c0">Gram positif</text>
+ <text x="410" y="198" font-size="17" font-weight="700" fill="#d9477f">Gram negatif</text>
+</g>
+<g text-anchor="middle" font-family="Source Sans 3,Segoe UI,sans-serif" font-size="11.5" fill="currentColor" opacity=".75">
+ <text x="180" y="214">tampak ungu · dinding tebal</text><text x="410" y="214">tampak merah muda · dinding tipis</text>
+</g>
+<!-- penampang Gram positif -->
+<g stroke="#8a5f12" stroke-width="1.6" stroke-linecap="round"><path d="M116 238V252M136 234V252M156 238V252M176 234V252M196 238V252M216 234V252M236 238V252"/></g>
+<rect x="100" y="250" width="160" height="50" fill="url(#pgPat)" stroke="#8a5f12" stroke-width="1.5"/>
+<rect x="100" y="304" width="160" height="20" fill="url(#lipG)" stroke="#1f6f4b" stroke-width="1.2"/>
+<rect x="100" y="324" width="160" height="60" fill="#f6dfc4"/>
+<text x="180" y="232" text-anchor="middle" font-size="10" fill="currentColor" opacity=".6" font-family="Source Sans 3,Segoe UI,sans-serif">luar sel</text>
+<!-- penampang Gram negatif -->
+<g stroke="#a02a5c" stroke-width="1.6" stroke-linecap="round"><path d="M340 238V250M354 242V250M368 238V250M382 242V250M396 238V250M410 242V250M424 238V250M438 242V250M452 238V250M466 242V250"/></g>
+<rect x="330" y="250" width="160" height="20" fill="url(#lipP)" stroke="#7d1f45" stroke-width="1.2"/>
+<rect x="330" y="270" width="160" height="28" fill="#fff0cf"/>
+<rect x="330" y="280" width="160" height="10" fill="url(#pgPat)" stroke="#8a5f12" stroke-width="1"/>
+<rect x="330" y="298" width="160" height="20" fill="url(#lipG)" stroke="#1f6f4b" stroke-width="1.2"/>
+<rect x="330" y="318" width="160" height="66" fill="#f6dfc4"/>
+<text x="410" y="232" text-anchor="middle" font-size="10" fill="currentColor" opacity=".6" font-family="Source Sans 3,Segoe UI,sans-serif">luar sel</text>
+<!-- label -->
+<g stroke="currentColor" stroke-width="1" opacity=".5" fill="none">
+ <path d="M96 242L118 246"/><path d="M96 271L130 275"/><path d="M96 314L130 314"/><path d="M96 353L130 353"/>
+ <path d="M496 239L470 241"/><path d="M496 258L486 260"/><path d="M496 272L486 275"/><path d="M496 286L486 286"/><path d="M496 307L486 308"/><path d="M496 348L486 350"/>
+</g>
+<g fill="currentColor" font-family="Source Sans 3,Segoe UI,sans-serif" font-size="11.5" font-weight="600">
+ <text x="92" y="246" text-anchor="end">Asam teikoat</text>
+ <text x="92" y="268" text-anchor="end">Peptidoglikan</text><text x="92" y="281" text-anchor="end">tebal</text>
+ <text x="92" y="318" text-anchor="end">Membran plasma</text><text x="92" y="357" text-anchor="end">Sitoplasma</text>
+ <text x="500" y="243">LPS</text><text x="500" y="262">Membran luar</text><text x="500" y="276">Periplasma</text><text x="500" y="290">Peptidoglikan tipis</text><text x="500" y="311">Membran dalam</text><text x="500" y="352">Sitoplasma</text>
+</g>
+<text x="300" y="404" text-anchor="middle" font-size="11" fill="currentColor" opacity=".6" font-family="Source Sans 3,Segoe UI,sans-serif">Ilustrasi komputer, bukan foto asli. Tampilan mikroskop (atas) dan penampang dinding sel (bawah).</text>
+</svg></div>`;
+function fillGram(){
+  const NS='http://www.w3.org/2000/svg',R=rng(7);
+  const mk=(n,a)=>{const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);return e};
+  const g1=$('#gF1'),g2=$('#gF2'); if(!g1||!g2)return;
+  g1.innerHTML='';g2.innerHTML='';
+  // kokus bergerombol, tertata rapi
+  const cl=[[150,70,6],[205,64,5],[170,118,7],[218,112,5],[130,112,4],[188,92,4]];
+  const dir=[[1,0],[.5,.87],[-.5,.87],[-1,0],[-.5,-.87],[.5,-.87],[0,0]];
+  cl.forEach(([cx,cy,n])=>{for(let i=0;i<n;i++){const d=dir[i%7],ring=i<7?1:2,x=cx+d[0]*11*ring,y=cy+d[1]*11*ring;
+    g1.appendChild(mk('circle',{cx:x.toFixed(1),cy:y.toFixed(1),r:"6.3",fill:'url(#gPur)'}));}});
+  // basil tersebar tanpa tumpang tindih
+  const pts=[];let t=0;
+  while(pts.length<13&&t<4000){t++;const x=340+R()*140,y=22+R()*146;
+    if(Math.hypot(x-410,y-95)>62)continue; if(pts.some(p=>Math.hypot(p[0]-x,p[1]-y)<26))continue; pts.push([x,y,R()*180]);}
+  pts.forEach(([x,y,a])=>{g2.appendChild(mk('rect',{x:x-12,y:y-4.2,width:24,height:8.4,rx:4.2,fill:'url(#gPnk)',transform:`rotate(${a.toFixed(0)} ${x.toFixed(1)} ${y.toFixed(1)})`}));});
+}
+
+/* ---------- Struktur sel: ribosom dan pili dibuat prosedural ---------- */
+(function(){
+  const R=rng(42),NS='http://www.w3.org/2000/svg';
+  const mk=(n,a)=>{const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);return e};
+  const g=$("#gRibG");
+  const inside=(x,y,m)=>{const cx=Math.min(350,Math.max(210,x));return Math.hypot(x-cx,y-160)<=62-m};
+  let n=0,tries=0;
+  while(n<85&&tries<4000){tries++;const x=150+R()*260,y=100+R()*120;
+    if(!inside(x,y,5))continue;
+    if(((x-280)/100)**2+((y-160)/48)**2<1)continue;
+    if(Math.hypot(x-180,y-190)<18||Math.hypot(x-385,y-130)<16)continue;
+    g.appendChild(mk('circle',{cx:x.toFixed(1),cy:y.toFixed(1),r:(3.2+R()*1.4).toFixed(1),fill:'url(#gRib)'}));n++}
+  const p=$('#gPili');
+  for(let x=166;x<=402;x+=24){
+    for(const sgn of [-1,1]){
+      const cx=Math.min(350,Math.max(210,x));const dy=Math.sqrt(Math.max(0,100*100-(x-cx)**2));
+      const y=160+sgn*dy;const nx=(x-cx)/100,ny=sgn*dy/100;const L=16+R()*12;
+      const ex=x+nx*L+(R()-.5)*8,ey=y+ny*L+(R()-.5)*4;
+      p.appendChild(mk('path',{d:`M${x} ${y.toFixed(1)} Q${(x+nx*L*.5+(R()-.5)*10).toFixed(1)} ${(y+ny*L*.5).toFixed(1)} ${ex.toFixed(1)} ${ey.toFixed(1)}`}));
+    }}
+  $('#cellUp').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();
+    r.onload=()=>{$('#cellImg').src=r.result;$('#cellImg').hidden=false;$('#cellSvg').style.display='none';$('#cellBack').hidden=false};r.readAsDataURL(f)});
+  $('#cellBack').onclick=()=>{$('#cellImg').hidden=true;$('#cellSvg').style.display='';$('#cellBack').hidden=true};
+})();
+
+renderPhotos();drawIlls();
+show((location.hash||'').slice(1)||'awal');
+</script>
+
+</body></html>
